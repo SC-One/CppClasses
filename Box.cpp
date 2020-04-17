@@ -13,6 +13,12 @@ Box::Box(const Box &box):Box{box.length, box.width, box.height}     // implement
 {
 
 }
+
+void Box::printBox() const
+{
+    std::cout<<"L: "<<length<<"\t"<<width<<"\t"<<height<<"\nVolume:"<<volume()<<"\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Thix box has printed as "<<++count<<" time(s).\n";
+    // if we didnt define count as mutable , it couldnt compile within const member function because it's modifying.
+}
 double Box::volume() const
 {
     return height*width*length;

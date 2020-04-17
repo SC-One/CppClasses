@@ -6,11 +6,14 @@ class Box
 {
 private:
     double length{1},width{1},height{1};
+    mutable unsigned int count{0};
 public:
     Box()=default;
     Box(double lv,double wv, double hv=2);
     explicit Box(double side);
     Box(const Box &box);
+
+    void printBox() const;
     double volume() const;
 
     // @@ Accessors @@
