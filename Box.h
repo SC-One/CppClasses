@@ -19,9 +19,9 @@ public:
     double getHeight(){return height;}
 
     // @@ Mutators @@
-    Box* setLength(double lv);
-    Box* setWidth(double wv);
-    Box* setHeight(double hv);
+    Box& setLength(double lv);
+    Box& setWidth(double wv);
+    Box& setHeight(double hv);
 
 
 
