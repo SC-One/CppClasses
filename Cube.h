@@ -7,7 +7,7 @@ private:
     double side;
 public:
 //    Cube()=default;
-    Cube(double aSide);
+    explicit Cube(double aSide);
     double volume();
     bool hasLargerVolumeThan(Cube aCube);
 };
