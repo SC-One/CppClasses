@@ -10,6 +10,11 @@ Box::Box(double side):Box{side,side,side}
 {
     std::cout<<"constrctor 2 called.\n";
 }
+
+Box::Box(const Box &box):Box{box.length, box.width, box.height}     // implementation copy-constructor by us.
+{
+
+}
 double Box::volume()
 {
     return height*width*length;

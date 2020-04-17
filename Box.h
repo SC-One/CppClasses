@@ -8,8 +8,20 @@ private:
     double length{1},width{1},height{1};
 public:
     Box()=default;
-    Box(double lv,double wv, double hv=2); // you can also difine default values.
-    explicit Box(double side);// cube box.    // cause of that single argument constructor we added explicit to prevent of implicit conversation by compiler.
+    Box(double lv,double wv, double hv=2);
+    explicit Box(double side);
+
+    /*      @@ Note @@
+    // copy constructor for any classes must be like this:
+
+    Type::Type(const Type& object)
+    {
+        // Code to duplicate the object...
+    }
+
+    */
+
+    Box(const Box &box);   // copy constructor
     double volume();
 };
 
