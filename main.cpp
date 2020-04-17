@@ -1,29 +1,17 @@
 #include<iostream>
-
-class Box
-{
-private:
-    double length{1};
-    double width{1};
-    double height{1};
-public:
-    Box(double l,double w, double h)
-    {
-        length=l;
-        width=w;
-        height=h;
-    }
-    Box()=default; // you can use box(){} too but it's better to use default keyword in modern C++.
-    double volume(){return length*height*width;}
-
-};
+#include"Box.h"
 
 int main()
 {
     Box one(10,2,3);
-    Box two;        // if you didnt define default default constructor , you get error.
-                    // and it's better use default keyword(line 16) , its preferedin modern C++.
+    Box two;
+    Box three{2,3,4};
     std::cout<< one.volume() <<std::endl;
     std::cout<<two.volume()<<std::endl;
+    std::cout<<three.volume()<<std::endl;
+
+    Box four{1,3,5};
+    auto cap{four.volume()};
+    std::cout<<cap<<std::endl;
     return 0;
 }
