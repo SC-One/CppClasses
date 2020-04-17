@@ -13,11 +13,17 @@ public:
     Box(const Box &box);
     double volume();
 
-    // @@ Accessor functions (getters) @@       // inline functions.
+    // @@ Accessors @@
     double getLength(){return length;}
     double getWidth(){return width;}
     double getHeight(){return height;}
-    // we defined them inside class because they are short.
+
+    // @@ Mutators @@
+    void setLength(double lv){if (lv>0) length=lv;}
+    void setWidth(double wv){if (wv>0) width=wv;}
+    void setHeight(double hv){if (hv>0) height=hv;}
+
+
 
 };
 
