@@ -22,3 +22,6 @@ int main()
 
     return 0;
 }
+
+
+// caution: By default, you should therefore declare all single-argument constructors as explicit to prevent implicit conversations.
