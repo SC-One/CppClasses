@@ -11,12 +11,12 @@ public:
     Box(double lv,double wv, double hv=2);
     explicit Box(double side);
     Box(const Box &box);
-    double volume();
+    double volume() const;
 
     // @@ Accessors @@
-    double getLength(){return length;}
-    double getWidth(){return width;}
-    double getHeight(){return height;}
+    double getLength() const{return length;}
+    double getWidth() const{return width;}
+    double getHeight() const{return height;}
 
     // @@ Mutators @@
     Box& setLength(double lv);
