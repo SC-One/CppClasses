@@ -2,11 +2,11 @@
 #include"Box.h"
 int main()
 {
-    Box box1{10};   // delegate constructor.
-    Box box2{2,4};// cause of default value for height , height will be 2.
-    Box box3{3,2,2};
+    Box box1{2};
+    Box box2{1,2,3};
+    Box copyBox1{box1};     // copy constructor by compiler created. all member variables (fields) will copy in new object.
     std::cout<<box1.volume()<<std::endl;
     std::cout<<box2.volume()<<std::endl;
-    std::cout<<box3.volume()<<std::endl;
+    std::cout<<copyBox1.volume()<<std::endl;
     return 0;
 }
